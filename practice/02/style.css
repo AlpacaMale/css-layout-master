@@ -1,15 +1,12 @@
 .father {
   display: flex;
   height: 100vh;
-  column-gap: 20px;
-  row-gap: 10px;
   justify-content: center;
-  align-items: center;
 }
 
 .box {
-  width: 200px;
   height: 200px;
+  width: 300px;
   background-color: tomato;
   color: white;
   font-size: 36px;
@@ -19,5 +16,12 @@
 }
 
 .box:first-child {
-  align-self: flex-start;
+  background-color: tomato;
+  flex-grow: 1;
+  flex-basis: 500px;
+}
+
+.box:last-child {
+  background-color: teal;
+  flex-grow: 1;
 }
