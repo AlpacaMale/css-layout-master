@@ -1,0 +1,26 @@
+.father {
+  display: grid;
+  grid-template-columns: [cucumber] 100px [potato] 200px [banana] 50px [brocoli];
+  grid-template-rows: 200px 100px;
+  gap: 10px;
+  column-gap: 20px;
+}
+
+.child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: tomato;
+}
+
+.child:first-child {
+  /* grid-row: 1 / -1; */
+  grid-row: span 2;
+}
+
+.child:last-child {
+  background-color: turquoise;
+  grid-column: potato / span 2;
+  /* grid-column: potato / brocoli; */
+}
