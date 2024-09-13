@@ -1,0 +1,60 @@
+@import "styles/reset.scss";
+
+$white: #dee1d6;
+$green: #5ebc44;
+
+body {
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.poster {
+  background-color: $green;
+  width: 37%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 3fr 7fr;
+  .top {
+    display: grid;
+    grid-template-columns: 75fr 25fr;
+    padding: 25px;
+    row-gap: 50px;
+    .top__box {
+      display: flex;
+      flex-direction: column;
+      font-weight: 600;
+      font-size: 18px;
+      padding: 15px;
+      gap: 5px;
+      h1 {
+        font-size: 148px;
+      }
+      &:last-child {
+        color: $white;
+        font-size: 22px;
+        align-self: center;
+      }
+    }
+  }
+  .bottom {
+    overflow: hidden;
+    .circles {
+      transform: scale(1.1);
+      background-color: black;
+      grid-template: repeat(11, 1fr) / repeat(11, 1fr);
+      height: 100%;
+      display: grid;
+      gap: 10px;
+      .circle {
+        background-color: $green;
+        border-radius: 50%;
+        &:nth-child(3n) {
+          background-color: $white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,145 @@
+@import "styles/reset.scss";
+
+body {
+  background-color: #dce6d1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.phone {
+  background-color: black;
+  border-radius: 50px;
+  height: 95%;
+  width: 420px;
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+.status-bar {
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header {
+  overflow-x: hidden;
+  .header__list {
+    display: flex;
+    color: white;
+    gap: 10px;
+    width: max-content;
+    .header__list-item {
+      border: 1px solid rgba($color: #fff, $alpha: 0.5);
+      padding: 10px;
+      border-radius: 20px;
+    }
+    .header__list-item--inverted {
+      background-color: white;
+      color: black;
+    }
+  }
+}
+
+.cards {
+  margin: 20px 0px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+
+  .cards__card {
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+    .card__title {
+      font-size: 28px;
+    }
+    .card__footer {
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span {
+        background-color: white;
+        color: black;
+        padding: 5px 10px;
+        border-radius: 15px;
+        border: 1px solid black;
+      }
+      .price {
+        background-color: #ffdd2c;
+      }
+    }
+
+    &:first-child {
+      background-color: #292d33;
+      color: white;
+      border: 1px solid white;
+
+      .card__footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+
+        .card__progress {
+          background-color: inherit;
+          border: none;
+          color: white;
+          font-size: 16px;
+          text-align: left;
+          padding: 10px 0px;
+        }
+
+        .card__progress-bar {
+          display: flex;
+          width: 100%;
+
+          span {
+            border: none;
+            border-radius: 10px;
+            &:first-child {
+              flex-grow: 63;
+              border-top-right-radius: 0px;
+              border-bottom-right-radius: 0px;
+            }
+            &:last-child {
+              background-color: #54575c;
+              border-top-left-radius: 0px;
+              border-bottom-left-radius: 0px;
+              flex-grow: 37;
+            }
+          }
+        }
+      }
+    }
+    &:nth-child(2) {
+      background-color: #fdfcfd;
+    }
+    &:nth-child(3) {
+      background-color: #f9fdbd;
+      .price {
+        background-color: #e9affc;
+      }
+    }
+    &:nth-child(4) {
+      background-color: #b2a0f6;
+    }
+    &:nth-child(5) {
+      background-color: #fed4d4;
+      .price {
+        background-color: #e9affc;
+      }
+    }
+    &:nth-child(6) {
+      background-color: #cffedc;
+    }
+    &:nth-child(3n) {
+      grid-column: span 2;
+    }
+  }
+}
