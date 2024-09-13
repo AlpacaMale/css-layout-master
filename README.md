@@ -6,4 +6,4 @@ This repository was created to record the code written while taking course from 
 
 - **Platform**: Nomad Coder
 - **Purpose**: To practice coding and document what has been learned
-- **Technologies Used**: HTML, CSS, Vite etc.
+- **Technologies Used**: HTML, CSS, Vite, SCSS etc.
